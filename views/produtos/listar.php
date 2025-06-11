@@ -19,6 +19,7 @@ if (!isset($produtos)) {
         <th>Nome</th>
         <th>Preço</th>
         <th>Ações</th>
+        <th>Compra</th>
     </tr>
     <?php if ($produtos): ?>
         <?php foreach ($produtos as $produto): ?>
@@ -29,6 +30,13 @@ if (!isset($produtos)) {
                 <td>
                     <a href="?action=editar&id=<?= $produto['id'] ?>">Editar</a> |
                     <a href="?action=deletar&id=<?= $produto['id'] ?>" onclick="return confirm('Tem certeza que deseja deletar?');">Deletar</a>
+                </td>
+                <td>
+                    <form method="post" action="?action=adicionarCarrinho">
+                        <input type="hidden" name="id" value="<?= $produto['id'] ?>">
+                        <input type="number" name="quantidade" value="1" min="1" max="<?= isset($produto['estoque']) ? $produto['estoque'] : 100 ?>" style="width: 50px;">
+                        <button type="submit">Comprar</button>
+                    </form>
                 </td>
             </tr>
         <?php endforeach; ?>
