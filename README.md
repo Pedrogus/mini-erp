@@ -23,13 +23,13 @@ php -S localhost:8000
 ### 1. Pré-requisitos
 
 - PHP 5.6 ou superior (Recomendado: PHP 7.0+)
-- Servidor local (Apache ou PHP embutido)
+- Servidor local
 - MySQL
 
 ### 2. Configuração
 
 - Clone ou baixe este repositório.
-- Importe o banco de dados `mini_erp.sql` (forneça se necessário).
+- Importe o banco de dados `banco.sql` (forneça se necessário).
 - Atualize as credenciais do banco no arquivo:
 
 ```php
