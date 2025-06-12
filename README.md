@@ -37,4 +37,4 @@ php -S localhost:8000
 $host = 'localhost';
 $usuario = 'root';
 $senha = '';
-$banco = 'mini_erp';
+$banco = 'erp';
